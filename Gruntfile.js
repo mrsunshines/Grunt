@@ -41,13 +41,13 @@
             dev: {
                 bsFiles: {
                     src : [
-                        'app/css/*.css',
-                        'app/*.html'
+                        'css/*.css',
+                        '*.html'
                     ]
                 },
                 options: {
                     watchTask: true,
-                    server: './app'
+                    server: './Grunt'
                 }
             }
         }
@@ -63,6 +63,6 @@
   grunt.loadNpmTasks('grunt-contrib-imagemin');
   grunt.loadNpmTasks('grunt-browser-sync');
   
-  grunt.registerTask('default', ['jshint', 'sass', 'imagemin', 'browserSync']);
+  grunt.registerTask('default', ['jshint', 'sass', 'imagemin', 'browserSync', 'watch']);
 
 };
